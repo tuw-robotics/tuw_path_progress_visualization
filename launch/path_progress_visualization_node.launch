@@ -1,0 +1,13 @@
+<launch>
+    <arg name="robot_name" default="r0" />
+    <arg name ="distance_threshold" default="0.2"/>
+    <arg name ="obstacle_vote_threshold" default="5"/>
+    <group ns="$(arg robot_name)">
+        <node pkg="tuw_path_progress_visualization " type="path_progress_visualization_node" name="tuw_path_progress_visualization" output="screen">
+            <param name="distance_threshold" value="$(arg distance_threshold)" />
+            <param name="obstacle_vote_threshold" value= "$(arg obstacle_vote_threshold)" />
+        </node>
+    </group>
+
+
+</launch>
